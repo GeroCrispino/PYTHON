@@ -204,20 +204,15 @@ for caracter in chars:
     eva1= eva1.replace(caracter,"")
     eva2= eva2.replace(caracter,"")
 
-list_a = nom1.lower().split(',')
-list_b = nom2.lower().split(',')
-list_eva1 = eva1.split(',')
-list_eva2 = eva2.split(',')
+lista_A = nom1.lower().split(',')
+lista_B = nom2.lower().split(',')
+lista_eva1 = eva1.split(',')
+lista_eva2 = eva2.split(',')
 
-#Lista por comprension
-#set = coleccion sin elementos duplicados
-#intersection = union de iterables
+repetidos = [nom for nom in set(lista_A).intersection(lista_B)]
+print("Nombre en ambas listas: \n",sorted(repetidos))
 
-lista_repetidos = [nom for nom in set(list_a).intersection(list_b)]
-print("Nombre en ambas listas: \n",sorted(lista_repetidos))
-
-#imprimir con format
 formato = "{:3} {:10} {:10} {:10} {:10}"
 print(formato.format('','nombre','nota1','nota2','nota final'))
-for i in range(len(list_a)):
-    print(formato.format(i, list_a[i] , list_eva1[i] , list_eva2[i] , int(list_eva1[i]) + int(list_eva2[i])  ))
+for i in range(len(lista_A)):
+    print(formato.format(i, lista_A[i] , lista_eva1[i] , lista_eva2[i] , int(lista_eva1[i]) + int(lista_eva2[i])  ))

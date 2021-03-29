@@ -140,21 +140,18 @@ eva2 = """30,
  57,
  10"""
 
-#listas.
-l_nombres = nombres.replace("'",'').split(',\n')
-l_notas1 = eva1.split(',\n') 
-l_notas2 = eva2.split(',\n')
+listaNom = nombres.replace("'",'').split(',\n')
+notas1 = eva1.split(',\n') 
+notas2 = eva2.split(',\n')
 
-#creo diccionario.
 datos_alumnos = {}
-for i in range(len(l_nombres)):
-    nota = int(l_notas1[i]) + int(l_notas2[i])
-    nom = l_nombres[i].upper()
+for i in range(len(listaNom)):
+    nota = int(notas1[i]) + int(notas2[i])
+    nom = listaNom[i].upper()
     datos_alumnos[nom] = nota
 
-#calcular promedio e informar alumnos por debajo del mismo.
-prom = sum(datos_alumnos.values()) / len(datos_alumnos)
-print(f"El promedio general es: {prom}")
-for elem in datos_alumnos:
-    if datos_alumnos[elem] < prom:
-        print("El alumno", elem ," con nota =",datos_alumnos[elem],"esta por debajo del promedio")
+promedio = sum(datos_alumnos.values()) / len(datos_alumnos)
+print(f"El promedio general es: {promedio}")
+for elemento in datos_alumnos:
+    if datos_alumnos[elemento] < promedio:
+        print("El alumno", elemento ," con nota =",datos_alumnos[elemento],"esta por debajo del promedio")
