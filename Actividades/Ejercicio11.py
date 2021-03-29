@@ -300,7 +300,7 @@ Utilities
 
 lineas= texto.split("\n")
 
-#creo diccionario
+
 categorias= {}
 
 for linea in lineas:
@@ -310,3 +310,11 @@ for linea in lineas:
             linea_actual = linea
         else:
             categorias[linea_actual].append(linea.strip())
+
+for cat,sub in categorias.items():
+    print(cat + ":")
+    print('---------------')
+    print("Subcategorias: ", len(sub))
+    for i in range(len(sub)):
+        print(sub[i])
+    print('---------------')
