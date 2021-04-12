@@ -140,14 +140,14 @@ eva2 = """30,
  57,
  10"""
 
-listaNom = nombres.replace("'",'').split(',\n')
+lista_nom = nombres.replace("'",'').split(',\n')
 notas1 = eva1.split(',\n') 
 notas2 = eva2.split(',\n')
 
 datos_alumnos = {}
-for i in range(len(listaNom)):
+for i in range(len(lista_nom)):
     nota = int(notas1[i]) + int(notas2[i])
-    nom = listaNom[i].upper()
+    nom = lista_nom[i].upper()
     datos_alumnos[nom] = nota
 
 promedio = sum(datos_alumnos.values()) / len(datos_alumnos)
