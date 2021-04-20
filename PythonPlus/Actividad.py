@@ -16,9 +16,6 @@ def lista_esp():
     return gratis_esp
 
 
-#print(lista_esp())
-
-
 #PUNTO 2
 def diez_mejores():
     lista_diez = []
@@ -40,10 +37,10 @@ def diez_mejores():
     
     return lista_diez
 
-print('Punto 1')
+print('PUNTO 1')
 print('-'*260)
 print(lista_esp())
 print('-'*260)
-print('Punto 2')
+print('PUNTO 2')
 print('-'*260)
 print(diez_mejores())       
