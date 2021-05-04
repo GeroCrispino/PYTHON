@@ -1,5 +1,6 @@
-Nombre de alumno: Gerónimo Jesús Crispino  
-Legajo: 16999/4  
+Nombre de alumno: *Gerónimo Jesús Crispino*  
+Legajo: *16999/4*  
+
 DATASET: PES-2019: https://www.kaggle.com/harshkava/pro-evolution-soccer-pes-2019-players-dataset  
 Licencia: No especificada  
 
